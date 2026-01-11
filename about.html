@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Us | Aesthetics By Simran Malra</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>About Us | Aesthetics By Simran Malra</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+
+:root{
+  --primary:#9b7c5b;
+  --dark:#1c1c1c;
+  --light:#faf8f6;
+  --muted:#6f6f6f;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--light);
+  color:var(--dark);
+  line-height:1.7;
+}
+
+header{
+  background:white;
+  padding:40px 8%;
+  border-bottom:1px solid #eee;
+}
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+}
+nav{
+  margin-top:20px;
+}
+nav a{
+  text-decoration:none;
+  color:var(--dark);
+  margin-right:25px;
+}
+nav a:hover{color:var(--primary);}
+
+section{
+  padding:80px 8%;
+  max-width:1000px;
+}
+
+section h2{
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  margin-bottom:20px;
+}
+
+section p{
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+ul{
+  margin-top:20px;
+}
+ul li{
+  list-style:none;
+  margin-bottom:12px;
+  padding-left:20px;
+  position:relative;
+}
+ul li::before{
+  content:"•";
+  color:var(--primary);
+  position:absolute;
+  left:0;
+}
+
+footer{
+  background:#111;
+  color:#ccc;
+  padding:30px 8%;
+}
+</style>
 </head>
+
 <body>
 
 <header>
@@ -22,23 +98,22 @@
   <h2>Meet Simran Malra</h2>
   <p>
     Aesthetics By Simran Malra is a specialised skin and aesthetic clinic based in Sirsa, Haryana.
-    Our goal is to help clients achieve healthy, confident skin through personalised treatments
-    and advanced aesthetic procedures.
+    We focus on enhancing natural beauty through medically-backed aesthetic treatments.
   </p>
-
   <p>
-    We believe skin care is not an expense — it is a <strong>skin-vestment</strong>.
-    Every treatment is designed after proper consultation, ensuring safety, comfort and natural-looking results.
+    Skin care is not an expense — it is a <strong>skin-vestment</strong>.
+    Each treatment is thoughtfully curated after detailed consultation, ensuring safety,
+    comfort and refined, natural-looking outcomes.
   </p>
 </section>
 
 <section>
   <h2>Our Philosophy</h2>
   <ul>
-    <li>Personalised treatment plans</li>
-    <li>Advanced, safe technologies</li>
-    <li>Hygienic and ethical practice</li>
-    <li>Focus on long-term skin health</li>
+    <li>Highly personalised treatment planning</li>
+    <li>Advanced and clinically safe technologies</li>
+    <li>Ethical, hygienic and transparent practice</li>
+    <li>Long-term skin health over short-term fixes</li>
   </ul>
 </section>
 
