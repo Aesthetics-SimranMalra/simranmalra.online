@@ -74,7 +74,6 @@
       padding: 0 10px;
     }
 
-    /* ⭐ SERVICES GRID */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -122,6 +121,24 @@
       color: #777;
       padding: 20px;
     }
+
+    /* IMAGE ADDITION */
+    .hall-image {
+      max-width: 900px;
+      margin: 25px auto;
+    }
+    .hall-image img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 16px;
+      background:#f4efe9;
+      padding:6px;
+    }
+
+    @media(max-width:768px){
+      header h1{font-size:28px;}
+    }
   </style>
 </head>
 
@@ -142,6 +159,11 @@
   <p><strong>Address:</strong> Near Bhuman Shah Chowk, Barnala Road, Sirsa, Haryana 125055</p>
   <p><strong>Phone / WhatsApp:</strong> <a href="tel:+918108108042">+91 81081 08042</a></p>
 </section>
+
+<!-- HALL IMAGE -->
+<div class="hall-image">
+  <img src="https://raw.githubusercontent.com/Aesthetics-SimranMalra/images/main/hall.jpeg" alt="Clinic Hall">
+</div>
 
 <section>
   <h2>Appointment / Query Form</h2>
