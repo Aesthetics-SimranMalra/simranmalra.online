@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Services | Aesthetics By Simran Malra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
 
   <style>
     body {
@@ -30,6 +29,21 @@
       text-align: center;
       font-size: 32px;
       margin-bottom: 40px;
+    }
+
+    /* 🔹 IMAGE ADDITIONS (NON-DESTRUCTIVE) */
+    .services-images {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+
+    .services-images img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 16px;
     }
 
     .service-grid {
@@ -63,8 +77,22 @@
       border-top: 1px solid #eee;
       font-size: 14px;
     }
+
+    /* RESPONSIVE SAFETY */
+    @media (min-width: 768px) {
+      .services-images {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-images img {
+        height: 240px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -73,6 +101,12 @@
 
 <section class="services">
   <h2>Our Services</h2>
+
+  <!-- 🔹 ADDED IMAGES (PLACED SAFELY ABOVE SERVICES) -->
+  <div class="services-images">
+    <img src="https://raw.githubusercontent.com/Aesthetics-SimranMalra/images/main/skin_vestment.jpeg" alt="Skin Treatments">
+    <img src="https://raw.githubusercontent.com/Aesthetics-SimranMalra/images/main/simran.jpeg" alt="Simran Malra">
+  </div>
 
   <div class="service-grid">
 
