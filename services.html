@@ -1,11 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Services | Aesthetics By Simran Malra</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Services | Aesthetics By Simran Malra</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+
+:root{
+  --primary:#9b7c5b;
+  --dark:#1c1c1c;
+  --muted:#6f6f6f;
+  --bg:#faf8f6;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+}
+
+/* HEADER */
+header{
+  background:white;
+  padding:40px 8%;
+  border-bottom:1px solid #eee;
+}
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+}
+nav{margin-top:20px}
+nav a{
+  text-decoration:none;
+  color:var(--dark);
+  margin-right:25px;
+}
+nav a:hover{color:var(--primary);}
+
+/* SERVICES GRID */
+section{
+  padding:80px 8%;
+}
+h2{
+  font-family:'Playfair Display',serif;
+  margin-bottom:40px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.05);
+  cursor:pointer;
+}
+
+.card h3{
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+}
+
+/* HOVER INFO */
+.info{
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,.97);
+  padding:30px;
+  opacity:0;
+  transition:.3s;
+}
+.card:hover .info{opacity:1}
+
+.info p{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:12px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  color:#777;
+  font-size:14px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
@@ -13,59 +104,68 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <section>
-  <h2>Facials & Skin Treatments</h2>
-  <ul>
-    <li>Customised Medi-Facials</li>
-    <li>Jet Peel Facial (Advanced Hydra)</li>
-    <li>Hydrafacial</li>
-    <li>Microdermabrasion</li>
-    <li>Dermaplaning</li>
-    <li>BB Glow Treatment</li>
-  </ul>
-</section>
+  <h2>Advanced Aesthetic Treatments</h2>
 
-<section>
-  <h2>Advanced Skin Procedures</h2>
-  <ul>
-    <li>Microneedling</li>
-    <li>Vampire Facial</li>
-    <li>GFC (Face & Hair)</li>
-    <li>Acne Scar Treatment</li>
-    <li>Melasma & Pigmentation Treatment</li>
-    <li>Dark Circle Treatment</li>
-  </ul>
-</section>
+  <div class="grid">
 
-<section>
-  <h2>Laser & Aesthetic Treatments</h2>
-  <ul>
-    <li>Laser Hair Reduction (LHR)</li>
-    <li>Electrolysis (Laser for White Hair)</li>
-    <li>Skin Tightening (HIFU)</li>
-    <li>Skin Tag, Mole & Wart Removal</li>
-    <li>Botox & Fillers</li>
-  </ul>
-</section>
+    <div class="card">
+      <h3>Hydrafacial</h3>
+      <div class="info">
+        <p>Deep cleansing, exfoliation and hydration for instantly glowing skin.</p>
+        <p>त्वचा की गहराई से सफाई, पोषण और तुरंत निखार के लिए।</p>
+      </div>
+    </div>
 
-<section>
-  <h2>Semi-Permanent Make-up</h2>
-  <ul>
-    <li>Microblading</li>
-    <li>Nano Shading</li>
-    <li>Lip Neutralisation</li>
-    <li>Lip Tint</li>
-    <li>Eyelash Extension & Lift</li>
-  </ul>
+    <div class="card">
+      <h3>Laser Hair Reduction</h3>
+      <div class="info">
+        <p>Safe, effective and long-term reduction of unwanted hair.</p>
+        <p>अनचाहे बालों को स्थायी रूप से कम करने की सुरक्षित प्रक्रिया।</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Microneedling / GFC</h3>
+      <div class="info">
+        <p>Boosts collagen, improves scars and overall skin texture.</p>
+        <p>कोलेजन बढ़ाकर दाग-धब्बे और त्वचा की गुणवत्ता सुधारता है।</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Anti-Aging</h3>
+      <div class="info">
+        <p>Reduces fine lines and restores youthful skin firmness.</p>
+        <p>झुर्रियों को कम कर त्वचा को युवा बनाता है।</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Botox & Fillers</h3>
+      <div class="info">
+        <p>Subtle enhancements for wrinkles and volume loss.</p>
+        <p>झुर्रियों और खोई हुई वॉल्यूम के लिए सुरक्षित समाधान।</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Pigmentation Treatments</h3>
+      <div class="info">
+        <p>Targets uneven skin tone and dark patches.</p>
+        <p>त्वचा की रंगत सुधारने और दाग-धब्बों के लिए।</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <footer>
-  <p>Consultation recommended before all procedures.</p>
+  <p>All procedures are customised after consultation.</p>
 </footer>
 
 </body>
