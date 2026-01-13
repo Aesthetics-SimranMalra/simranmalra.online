@@ -1,373 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact | Aesthetics By Simran Malra</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Contact | Aesthetics By Simran Malra</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body{
-      font-family:"Segoe UI",Arial,sans-serif;
-      background:#f7f5f2;
-      margin:0;
-      color:#333;
-    }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap');
 
-    header{
-      background:linear-gradient(135deg,#c06c84,#f67280);
-      color:#fff;
-      padding:24px 16px;
-      text-align:center;
-    }
+body{
+  font-family:'Inter',sans-serif;
+  background:#fafafa;
+  margin:0;
+  color:#333;
+  line-height:1.6;
+}
 
-    header h1{margin:0;font-size:32px;}
+/* HEADER */
+header{
+  text-align:center;
+  padding:22px;
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  margin:0;
+}
 
-    nav{margin-top:10px;}
-    nav a{
-      color:#fff;
-      margin:0 12px;
-      text-decoration:none;
-      font-weight:500;
-    }
+/* FORMS SECTION */
+section.form-section{
+  max-width:1000px;
+  margin:40px auto;
+  padding:0 20px;
+}
 
-    section{
-      max-width:900px;
-      margin:30px auto;
-      background:#fff;
-      padding:28px;
-      border-radius:14px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.06);
-    }
+/* FORM CARD */
+.form-card{
+  background:#fff;
+  border-radius:16px;
+  padding:30px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.07);
+  margin-bottom:40px;
+  transition:0.3s;
+}
+.form-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 20px 45px rgba(192,108,132,0.25);
+}
 
-    h2{margin-top:0;color:#444;}
+.form-card h2{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  margin-bottom:20px;
+  text-align:center;
+}
 
-    .note{
-      font-size:14px;
-      color:#666;
-      margin-bottom:18px;
-    }
+label{
+  display:block;
+  margin-bottom:16px;
+  font-weight:500;
+}
 
-    label{
-      display:block;
-      margin-bottom:16px;
-      font-weight:500;
-    }
+input,textarea,select{
+  width:100%;
+  padding:12px;
+  margin-top:6px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:15px;
+}
 
-    input,textarea,select{
-      width:100%;
-      padding:12px;
-      margin-top:6px;
-      border-radius:8px;
-      border:1px solid #ccc;
-      font-size:15px;
-    }
+.note{
+  font-size:16px;
+  color:#555;
+  margin-bottom:18px;
+  font-weight:500;
+}
 
-    .type-select{
-      display:flex;
-      gap:16px;
-      margin-bottom:24px;
-    }
+/* SERVICE CHECKBOXES */
+fieldset{
+  border:1px solid #ddd;
+  padding:20px;
+  border-radius:12px;
+  margin:24px 0;
+}
+legend{
+  font-weight:600;
+  padding:0 10px;
+}
 
-    .type-select button{
-      flex:1;
-      padding:16px;
-      font-size:16px;
-      border-radius:12px;
-      border:2px solid #c06c84;
-      background:#fff;
-      cursor:pointer;
-      font-weight:600;
-    }
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px 20px;
+  margin-top:14px;
+}
+.services-grid label{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+.services-grid input{
+  width:auto;
+  margin-top:0;
+}
 
-    .type-select button.active{
-      background:#c06c84;
-      color:#fff;
-    }
+.services-grid label span{
+  transition:0.3s;
+}
 
-    fieldset{
-      border:1px solid #ddd;
-      padding:20px;
-      margin:24px 0;
-      border-radius:12px;
-    }
+/* SELECTED SERVICE STYLE */
+.services-grid input:checked + span{
+  color:#c06c84;
+  font-weight:600;
+  font-size:15.5px;
+}
 
-    legend{
-      font-weight:600;
-      padding:0 10px;
-    }
+/* SEND BUTTON */
+.send-btn{
+  width:100%;
+  padding:16px;
+  background:linear-gradient(135deg,#25D366,#1ebe5d);
+  color:#fff;
+  border:none;
+  border-radius:14px;
+  font-size:17px;
+  font-weight:600;
+  cursor:pointer;
+}
+.send-btn:hover{
+  opacity:0.95;
+}
 
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:12px 20px;
-      margin-top:14px;
-    }
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:18px;
+  background:#fff;
+  border-top:1px solid #eee;
+  font-size:14px;
+}
 
-    .services-grid label{
-      display:flex;
-      gap:10px;
-      font-weight:normal;
-      cursor:pointer;
-    }
-
-    .services-grid input{
-      width:auto;
-      margin-top:3px;
-    }
-
-    .send-btn{
-      width:100%;
-      padding:16px;
-      background:linear-gradient(135deg,#25D366,#1ebe5d);
-      color:#fff;
-      border:none;
-      border-radius:14px;
-      font-size:17px;
-      font-weight:600;
-      cursor:pointer;
-    }
-
-    footer{
-      text-align:center;
-      font-size:14px;
-      color:#777;
-      padding:24px 10px;
-    }
-
-    @media(max-width:768px){
-      header h1{font-size:26px;}
-      .type-select{flex-direction:column;}
-    }
-  </style>
+/* RESPONSIVE */
+@media(max-width:768px){
+  header h1{font-size:28px;}
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>Contact & Appointments</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 </header>
 
-<section>
+<section class="form-section">
+
+<!-- FORM CARD -->
+<div class="form-card">
   <h2>Send Us a WhatsApp Message</h2>
-  <p class="note">This form sends your message directly to our WhatsApp.</p>
+  <p class="note">Please provide your WhatsApp number preferably (or email).</p>
 
-  <form onsubmit="sendWhatsApp(); return false;">
-
-    <div class="type-select">
-      <button type="button" id="btnQuery" onclick="setType('Query')">General Query</button>
-      <button type="button" id="btnAppointment" onclick="setType('Appointment')">Book Appointment</button>
-    </div>
-
-    <input type="hidden" id="type">
+  <form onsubmit="sendWhatsAppForm(event,this)">
 
     <label>
       Full Name *
-      <input type="text" id="name" required>
+      <input type="text" name="name" required>
     </label>
 
     <label>
-      Phone Number
-      <div style="display:flex;gap:10px;">
-        <select id="countryCode">
-<option value="+91" selected>🇮🇳 India (+91)</option>
-<option value="+1">🇨🇦 Canada (+1)</option>
-<option value="+61">🇦🇺 Australia (+61)</option>
-
-<option disabled>──────────</option>
-
-<option value="+54">🇦🇷 Argentina (+54)</option>
-<option value="+43">🇦🇹 Austria (+43)</option>
-<option value="+973">🇧🇭 Bahrain (+973)</option>
-<option value="+880">🇧🇩 Bangladesh (+880)</option>
-<option value="+32">🇧🇪 Belgium (+32)</option>
-<option value="+55">🇧🇷 Brazil (+55)</option>
-<option value="+359">🇧🇬 Bulgaria (+359)</option>
-
-<option value="+86">🇨🇳 China (+86)</option>
-<option value="+57">🇨🇴 Colombia (+57)</option>
-<option value="+385">🇭🇷 Croatia (+385)</option>
-<option value="+357">🇨🇾 Cyprus (+357)</option>
-<option value="+420">🇨🇿 Czech Republic (+420)</option>
-
-<option value="+45">🇩🇰 Denmark (+45)</option>
-<option value="+20">🇪🇬 Egypt (+20)</option>
-<option value="+372">🇪🇪 Estonia (+372)</option>
-
-<option value="+358">🇫🇮 Finland (+358)</option>
-<option value="+33">🇫🇷 France (+33)</option>
-
-<option value="+49">🇩🇪 Germany (+49)</option>
-<option value="+30">🇬🇷 Greece (+30)</option>
-<option value="+852">🇭🇰 Hong Kong (+852)</option>
-<option value="+36">🇭🇺 Hungary (+36)</option>
-
-<option value="+62">🇮🇩 Indonesia (+62)</option>
-<option value="+353">🇮🇪 Ireland (+353)</option>
-<option value="+39">🇮🇹 Italy (+39)</option>
-<option value="+81">🇯🇵 Japan (+81)</option>
-<option value="+254">🇰🇪 Kenya (+254)</option>
-<option value="+965">🇰🇼 Kuwait (+965)</option>
-
-<option value="+371">🇱🇻 Latvia (+371)</option>
-<option value="+370">🇱🇹 Lithuania (+370)</option>
-<option value="+352">🇱🇺 Luxembourg (+352)</option>
-
-<option value="+60">🇲🇾 Malaysia (+60)</option>
-<option value="+52">🇲🇽 Mexico (+52)</option>
-<option value="+377">🇲🇨 Monaco (+377)</option>
-
-<option value="+31">🇳🇱 Netherlands (+31)</option>
-<option value="+64">🇳🇿 New Zealand (+64)</option>
-<option value="+234">🇳🇬 Nigeria (+234)</option>
-<option value="+47">🇳🇴 Norway (+47)</option>
-
-<option value="+92">🇵🇰 Pakistan (+92)</option>
-<option value="+63">🇵🇭 Philippines (+63)</option>
-<option value="+48">🇵🇱 Poland (+48)</option>
-<option value="+351">🇵🇹 Portugal (+351)</option>
-
-<option value="+974">🇶🇦 Qatar (+974)</option>
-<option value="+40">🇷🇴 Romania (+40)</option>
-<option value="+7">🇷🇺 Russia (+7)</option>
-
-<option value="+966">🇸🇦 Saudi Arabia (+966)</option>
-<option value="+65">🇸🇬 Singapore (+65)</option>
-<option value="+421">🇸🇰 Slovakia (+421)</option>
-<option value="+386">🇸🇮 Slovenia (+386)</option>
-<option value="+27">🇿🇦 South Africa (+27)</option>
-<option value="+34">🇪🇸 Spain (+34)</option>
-<option value="+94">🇱🇰 Sri Lanka (+94)</option>
-<option value="+46">🇸🇪 Sweden (+46)</option>
-<option value="+41">🇨🇭 Switzerland (+41)</option>
-
-<option value="+66">🇹🇭 Thailand (+66)</option>
-<option value="+90">🇹🇷 Turkey (+90)</option>
-
-<option value="+971">🇦🇪 United Arab Emirates (+971)</option>
-<option value="+44">🇬🇧 United Kingdom (+44)</option>
-<option value="+1">🇺🇸 United States (+1)</option>
-
-<option value="+84">🇻🇳 Vietnam (+84)</option>
-
-          
-          <option value="+1">🇺🇸 +1</option>
-          <option value="+44">🇬🇧 +44</option>
-          <option value="+971">🇦🇪 +971</option>
-          <option value="+61">🇦🇺 +61</option>
-        </select>
-        <input
-          type="tel"
-          id="phone"
-          placeholder="Enter number"
-          inputmode="numeric"
-          pattern="[0-9]*"
-          oninput="this.value=this.value.replace(/[^0-9]/g,'')"
-        >
-      </div>
+      Phone Number *
+      <input type="tel" name="phone" pattern="[0-9]+" required>
     </label>
-
-    <p class="note">WhatsApp number preferably (for phone/email)</p>
 
     <label>
       Email Address
-      <input type="email" id="email">
+      <input type="email" name="email">
     </label>
 
-    <p class="note">Please provide at least a phone number or an email.</p>
-
-    <!-- SERVICES -->
     <fieldset>
-      <legend>Query is related to</legend>
-
+      <legend>Select Service (Choose one or more, or Others)</legend>
       <div class="services-grid">
-        <label><input type="checkbox" class="service" value="Customised Medi-Facials"> Customised Medi-Facials</label>
-        <label><input type="checkbox" class="service" value="Jet Peel Facial (Advanced Hydra)"> Jet Peel Facial (Advanced Hydra)</label>
-        <label><input type="checkbox" class="service" value="Hydrafacial"> Hydrafacial</label>
-        <label><input type="checkbox" class="service" value="Microdermabrasion"> Microdermabrasion</label>
-        <label><input type="checkbox" class="service" value="Vampire Facial"> Vampire Facial</label>
-        <label><input type="checkbox" class="service" value="Laser Treatments"> Laser Treatments</label>
-        <label><input type="checkbox" class="service" value="Microneedling"> Microneedling</label>
-        <label><input type="checkbox" class="service" value="Laser Hair Reduction (LHR)"> Laser Hair Reduction (LHR)</label>
-        <label><input type="checkbox" class="service" value="Electrolysis (White Hair)"> Electrolysis (Laser for White Hair)</label>
-        <label><input type="checkbox" class="service" value="Skin Tightening (HIFU)"> Skin Tightening Treatment (HIFU)</label>
-        <label><input type="checkbox" class="service" value="Skin Tag Removal"> Skin Tag Removal</label>
-        <label><input type="checkbox" class="service" value="Mole Removal"> Mole Removal</label>
-        <label><input type="checkbox" class="service" value="Ear Lobe Repair"> Ear-Lobe Repair</label>
-        <label><input type="checkbox" class="service" value="Wart Removal"> Wart Removal</label>
-        <label><input type="checkbox" class="service" value="Dermaplaning"> Dermaplaning</label>
-        <label><input type="checkbox" class="service" value="Pigmentation Treatment"> Pigmentation Treatment</label>
-        <label><input type="checkbox" class="service" value="Dark Circle Treatment"> Dark Circle Treatment</label>
-        <label><input type="checkbox" class="service" value="Full Body Polishing"> Full Body Polishing</label>
-        <label><input type="checkbox" class="service" value="Melasma Treatment"> Melasma Treatment</label>
-        <label><input type="checkbox" class="service" value="GFC for Face"> GFC (Face)</label>
-        <label><input type="checkbox" class="service" value="GFC for Hair"> GFC (Hair)</label>
-        <label><input type="checkbox" class="service" value="Xanthalasma Treatment"> Xanthalasma Treatment</label>
-        <label><input type="checkbox" class="service" value="Acne Scar Treatment"> Acne Scar Treatment</label>
-        <label><input type="checkbox" class="service" value="Anti Aging Boosters"> Anti-Aging Boosters</label>
-        <label><input type="checkbox" class="service" value="Semi Permanent Make-up"> Semi Permanent Make-up</label>
-        <label><input type="checkbox" class="service" value="Microblading"> Microblading</label>
-        <label><input type="checkbox" class="service" value="Nano Shading"> Nano Shading</label>
-        <label><input type="checkbox" class="service" value="Lip Neutralisation"> Lip Neutralisation</label>
-        <label><input type="checkbox" class="service" value="Lip Tint"> Lip Tint</label>
-        <label><input type="checkbox" class="service" value="Eyelash Extension"> Eyelash Extension</label>
-        <label><input type="checkbox" class="service" value="Eyelash Lift"> Eyelash Lift</label>
-        <label><input type="checkbox" class="service" value="BB Glow Treatment"> BB Glow Treatment</label>
-        <label><input type="checkbox" class="service" value="Botox"> Botox</label>
-        <label><input type="checkbox" class="service" value="Fillers"> Fillers</label>
-        <label><input type="checkbox" class="service" value="Q Switch Laser"> Q-Switch Laser (Tattoo, Freckles, Carbon, Pigmentation, Open Pores)</label>
+        <label><input type="checkbox" name="service" value="Customised Medi-Facials"><span>Customised Medi-Facials</span></label>
+        <label><input type="checkbox" name="service" value="Jet Peel Facial"><span>Jet Peel Facial (Advanced Hydra)</span></label>
+        <label><input type="checkbox" name="service" value="Hydrafacial"><span>Hydrafacial</span></label>
+        <label><input type="checkbox" name="service" value="Microdermabrasion"><span>Microdermabrasion</span></label>
+        <label><input type="checkbox" name="service" value="Vampire Facial"><span>Vampire Facial</span></label>
+        <label><input type="checkbox" name="service" value="Laser Treatments"><span>Laser Treatments</span></label>
+        <label><input type="checkbox" name="service" value="Microneedling"><span>Microneedling</span></label>
+        <label><input type="checkbox" name="service" value="Laser Hair Reduction"><span>Laser Hair Reduction (LHR)</span></label>
+        <label><input type="checkbox" name="service" value="Electrolysis"><span>Electrolysis (Laser for White Hair)</span></label>
+        <label><input type="checkbox" name="service" value="Skin Tightening"><span>Skin Tightening (HIFU)</span></label>
+        <label><input type="checkbox" name="service" value="Skin Tag Removal"><span>Skin Tag Removal</span></label>
+        <label><input type="checkbox" name="service" value="Mole Removal"><span>Mole Removal</span></label>
+        <label><input type="checkbox" name="service" value="Ear-Lobe Repair"><span>Ear-Lobe Repair</span></label>
+        <label><input type="checkbox" name="service" value="Wart Removal"><span>Wart Removal</span></label>
+        <label><input type="checkbox" name="service" value="Dermaplaning"><span>Dermaplaning</span></label>
+        <label><input type="checkbox" name="service" value="Pigmentation Treatment"><span>Pigmentation Treatment</span></label>
+        <label><input type="checkbox" name="service" value="Dark Circle Treatment"><span>Dark Circle Treatment</span></label>
+        <label><input type="checkbox" name="service" value="Full Body Polishing"><span>Full Body Polishing</span></label>
+        <label><input type="checkbox" name="service" value="Melasma Treatment"><span>Melasma Treatment</span></label>
+        <label><input type="checkbox" name="service" value="GFC Face"><span>GFC (for Face)</span></label>
+        <label><input type="checkbox" name="service" value="GFC Hair"><span>GFC (for Hair)</span></label>
+        <label><input type="checkbox" name="service" value="Xanthalasma Treatment"><span>Xanthalasma Treatment</span></label>
+        <label><input type="checkbox" name="service" value="Acne Scar Treatment"><span>Acne Scar Treatment</span></label>
+        <label><input type="checkbox" name="service" value="Anti-Aging Boosters"><span>Anti-Aging Boosters</span></label>
+        <label><input type="checkbox" name="service" value="Semi Permanent Make-up"><span>Semi Permanent Make-up</span></label>
+        <label><input type="checkbox" name="service" value="Microblading"><span>Microblading</span></label>
+        <label><input type="checkbox" name="service" value="Nano Shading"><span>Nano Shading</span></label>
+        <label><input type="checkbox" name="service" value="Lip Neutralisation"><span>Lip Neutralisation</span></label>
+        <label><input type="checkbox" name="service" value="Lip Tint"><span>Lip Tint</span></label>
+        <label><input type="checkbox" name="service" value="Eyelash Extension"><span>Eyelash Extension</span></label>
+        <label><input type="checkbox" name="service" value="Eyelash Lift"><span>Eyelash Lift</span></label>
+        <label><input type="checkbox" name="service" value="BB Glow Treatment"><span>BB Glow Treatment</span></label>
+        <label><input type="checkbox" name="service" value="Botox"><span>Botox</span></label>
+        <label><input type="checkbox" name="service" value="Fillers"><span>Fillers</span></label>
+        <label><input type="checkbox" name="service" value="Qswitch Laser"><span>Qswitch Laser (Tattoo Removal, Freckles, Uneven Tone, Carbon, Open Pores)</span></label>
+        <label><input type="checkbox" name="service" value="Others" class="others"><span>OTHERS</span></label>
       </div>
     </fieldset>
 
     <label>
       Your Message
-      <textarea id="message" rows="6"></textarea>
+      <textarea name="message" rows="6" placeholder="Please describe your concern or request..."></textarea>
     </label>
 
     <button type="submit" class="send-btn">Send via WhatsApp</button>
   </form>
+</div>
+
 </section>
 
 <footer>
-  <p>Results may vary from person to person. All treatments are performed after consultation.</p>
+  <p>📞 Call / WhatsApp: +91 81081 08042</p>
 </footer>
 
 <script>
-  function setType(value){
-    document.getElementById('type').value=value;
-    document.getElementById('btnQuery').classList.toggle('active',value==="Query");
-    document.getElementById('btnAppointment').classList.toggle('active',value==="Appointment");
+// OTHERS checkbox logic
+document.querySelectorAll('.services-grid').forEach(grid=>{
+  const others = grid.querySelector('.others');
+  const checkboxes = grid.querySelectorAll('input[type="checkbox"]:not(.others)');
+
+  grid.addEventListener('change', e=>{
+    if(e.target === others){
+      if(others.checked){
+        checkboxes.forEach(cb=>{
+          cb.checked=false;
+          cb.disabled=true;
+        });
+      } else {
+        checkboxes.forEach(cb=>cb.disabled=false);
+      }
+    } else {
+      if([...checkboxes].some(cb=>cb.checked)){
+        others.checked=false;
+        others.disabled=true;
+      } else {
+        others.disabled=false;
+      }
+    }
+  });
+});
+
+// WhatsApp sending logic
+function sendWhatsAppForm(e,form){
+  e.preventDefault();
+  const name = form.name.value.trim();
+  const phone = form.phone.value.trim();
+  const email = form.email.value.trim();
+  const services = [...form.querySelectorAll('input[name="service"]:checked')].map(c=>c.value).join(', ') || 'Not specified';
+  const msg = form.message.value.trim() || '—';
+
+  if(!phone && !email){
+    alert("Please provide phone or email");
+    return;
   }
 
-  function sendWhatsApp(){
-    const type=document.getElementById('type').value;
-    const name=document.getElementById('name').value.trim();
-    const code=document.getElementById('countryCode').value;
-    const phone=document.getElementById('phone').value.trim();
-    const email=document.getElementById('email').value.trim();
-    const msg=document.getElementById('message').value.trim();
-
-    if(!type){alert("Please select Query or Appointment.");return;}
-    if(!phone && !email){alert("Please provide a phone number or email.");return;}
-
-    const services=[...document.querySelectorAll('.service:checked')].map(s=>s.value).join(', ') || 'Not specified';
-
-    const text=
-`*Type:* ${type}
-*Name:* ${name}
-*Phone:* ${phone ? code+' '+phone : '—'}
-*Email:* ${email || '—'}
-*Services:* ${services}
-
-${msg || '—'}`;
-
-    window.open("https://wa.me/918108108042?text="+encodeURIComponent(text),'_blank');
-  }
+  const text = `*Name:* ${name}\n*Phone:* ${phone || '—'}\n*Email:* ${email || '—'}\n*Service:* ${services}\n\n${msg}`;
+  const waUrl = `https://wa.me/918108108042?text=${encodeURIComponent(text)}`;
+  window.open(waUrl,'_blank');
+}
 </script>
 
 </body>
