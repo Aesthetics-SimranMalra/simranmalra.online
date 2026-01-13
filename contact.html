@@ -103,11 +103,77 @@ footer{
 </header>
 
 <section class="form-section">
-  <div class="form-card">
-    <h2>Send Us a WhatsApp Message</h2>
-    <p>Please provide your WhatsApp number preferably (or email).</p>
-    <!-- your form stays exactly as before -->
-  </div>
+<div class="form-card">
+  <h2>Send Us a WhatsApp Message</h2>
+  <p class="note">Please provide your WhatsApp number preferably (or email).</p>
+
+  <form onsubmit="sendWhatsAppForm(event,this)">
+
+    <label>
+      Full Name *
+      <input type="text" name="name" required>
+    </label>
+
+    <label>
+      Phone Number *
+      <input type="tel" name="phone" pattern="[0-9]+" required>
+    </label>
+
+    <label>
+      Email Address
+      <input type="email" name="email">
+    </label>
+
+    <fieldset>
+      <legend>Select Service (Choose one or more, or Others)</legend>
+      <div class="services-grid">
+        <label><input type="checkbox" name="service" value="Customised Medi-Facials"><span>Customised Medi-Facials</span></label>
+        <label><input type="checkbox" name="service" value="Jet Peel Facial"><span>Jet Peel Facial (Advanced Hydra)</span></label>
+        <label><input type="checkbox" name="service" value="Hydrafacial"><span>Hydrafacial</span></label>
+        <label><input type="checkbox" name="service" value="Microdermabrasion"><span>Microdermabrasion</span></label>
+        <label><input type="checkbox" name="service" value="Vampire Facial"><span>Vampire Facial</span></label>
+        <label><input type="checkbox" name="service" value="Laser Treatments"><span>Laser Treatments</span></label>
+        <label><input type="checkbox" name="service" value="Microneedling"><span>Microneedling</span></label>
+        <label><input type="checkbox" name="service" value="Laser Hair Reduction"><span>Laser Hair Reduction (LHR)</span></label>
+        <label><input type="checkbox" name="service" value="Electrolysis"><span>Electrolysis (Laser for White Hair)</span></label>
+        <label><input type="checkbox" name="service" value="Skin Tightening"><span>Skin Tightening (HIFU)</span></label>
+        <label><input type="checkbox" name="service" value="Skin Tag Removal"><span>Skin Tag Removal</span></label>
+        <label><input type="checkbox" name="service" value="Mole Removal"><span>Mole Removal</span></label>
+        <label><input type="checkbox" name="service" value="Ear-Lobe Repair"><span>Ear-Lobe Repair</span></label>
+        <label><input type="checkbox" name="service" value="Wart Removal"><span>Wart Removal</span></label>
+        <label><input type="checkbox" name="service" value="Dermaplaning"><span>Dermaplaning</span></label>
+        <label><input type="checkbox" name="service" value="Pigmentation Treatment"><span>Pigmentation Treatment</span></label>
+        <label><input type="checkbox" name="service" value="Dark Circle Treatment"><span>Dark Circle Treatment</span></label>
+        <label><input type="checkbox" name="service" value="Full Body Polishing"><span>Full Body Polishing</span></label>
+        <label><input type="checkbox" name="service" value="Melasma Treatment"><span>Melasma Treatment</span></label>
+        <label><input type="checkbox" name="service" value="GFC Face"><span>GFC (for Face)</span></label>
+        <label><input type="checkbox" name="service" value="GFC Hair"><span>GFC (for Hair)</span></label>
+        <label><input type="checkbox" name="service" value="Xanthalasma Treatment"><span>Xanthalasma Treatment</span></label>
+        <label><input type="checkbox" name="service" value="Acne Scar Treatment"><span>Acne Scar Treatment</span></label>
+        <label><input type="checkbox" name="service" value="Anti-Aging Boosters"><span>Anti-Aging Boosters</span></label>
+        <label><input type="checkbox" name="service" value="Semi Permanent Make-up"><span>Semi Permanent Make-up</span></label>
+        <label><input type="checkbox" name="service" value="Microblading"><span>Microblading</span></label>
+        <label><input type="checkbox" name="service" value="Nano Shading"><span>Nano Shading</span></label>
+        <label><input type="checkbox" name="service" value="Lip Neutralisation"><span>Lip Neutralisation</span></label>
+        <label><input type="checkbox" name="service" value="Lip Tint"><span>Lip Tint</span></label>
+        <label><input type="checkbox" name="service" value="Eyelash Extension"><span>Eyelash Extension</span></label>
+        <label><input type="checkbox" name="service" value="Eyelash Lift"><span>Eyelash Lift</span></label>
+        <label><input type="checkbox" name="service" value="BB Glow Treatment"><span>BB Glow Treatment</span></label>
+        <label><input type="checkbox" name="service" value="Botox"><span>Botox</span></label>
+        <label><input type="checkbox" name="service" value="Fillers"><span>Fillers</span></label>
+        <label><input type="checkbox" name="service" value="Qswitch Laser"><span>Qswitch Laser (Tattoo Removal, Freckles, Uneven Tone, Carbon, Open Pores)</span></label>
+        <label><input type="checkbox" name="service" value="Others" class="others"><span>OTHERS</span></label>
+      </div>
+    </fieldset>
+
+    <label>
+      Your Message
+      <textarea name="message" rows="6" placeholder="Please describe your concern or request..."></textarea>
+    </label>
+
+    <button type="submit" class="send-btn">Send via WhatsApp</button>
+  </form>
+</div>
 </section>
 
 <footer>
