@@ -106,26 +106,32 @@ nav a:hover{color:var(--primary);}
   gap:14px 22px;
 }
 
-.service-chip{
-  background:white;
+/* Service chips (also used as links) */
+.new-services-cloud .service-chip{
+  display:inline-block;
+  background:#fff;
   padding:10px 18px;
   border-radius:999px;
   font-size:14px;
   font-weight:600;
   box-shadow:var(--shadow);
-  transition:transform .3s ease;
+  text-decoration:none;     /* remove underline */
+  color:var(--dark);        /* keep text color consistent */
+  transition:transform .3s ease, box-shadow .3s ease;
 }
 
-/* subtle rotations */
-.service-chip:nth-child(1){transform:rotate(-2deg);}
-.service-chip:nth-child(2){transform:rotate(1.5deg);}
-.service-chip:nth-child(3){transform:rotate(-1deg);}
-.service-chip:nth-child(4){transform:rotate(2deg);}
-.service-chip:nth-child(5){transform:rotate(-1.5deg);}
-.service-chip:nth-child(6){transform:rotate(1deg);}
+/* subtle, varied rotations */
+.new-services-cloud .service-chip:nth-child(1){transform:rotate(-2deg);}
+.new-services-cloud .service-chip:nth-child(2){transform:rotate(1.5deg);}
+.new-services-cloud .service-chip:nth-child(3){transform:rotate(-1deg);}
+.new-services-cloud .service-chip:nth-child(4){transform:rotate(2deg);}
+.new-services-cloud .service-chip:nth-child(5){transform:rotate(-1.5deg);}
+.new-services-cloud .service-chip:nth-child(6){transform:rotate(1deg);}
 
-.service-chip:hover{
+/* hover interaction */
+.new-services-cloud .service-chip:hover{
   transform:rotate(0deg) scale(1.05);
+  box-shadow:0 16px 40px rgba(0,0,0,0.12);
 }
 
 /* IMAGE */
