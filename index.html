@@ -10,9 +10,9 @@
 
 <style>
 :root{
-  --primary:#c06c84;      /* Elegant rose */
-  --secondary:#f8e3dc;    /* Soft background highlight */
-  --dark:#1c1c1c;         
+  --primary:#c06c84;
+  --secondary:#f8e3dc;
+  --dark:#1c1c1c;
   --light:#faf8f6;
   --muted:#6f6f6f;
   --shadow:0 12px 35px rgba(0,0,0,0.08);
@@ -27,43 +27,54 @@ body{
   line-height:1.7;
 }
 
-/* HEADER */
+/* HEADER (FIXED SIZE + NON-STICKY) */
 header{
   background:white;
-  padding:40px 8%;
+  padding:18px 8%;
   border-bottom:1px solid #eee;
-  position:sticky;
-  top:0;
-  z-index:1000;
+  position:relative;
+  z-index:10;
 }
 header h1{
   font-family:'Playfair Display',serif;
-  font-size:42px;
+  font-size:32px;
   font-weight:700;
   color:var(--primary);
 }
 .tagline{
   color:var(--muted);
   font-style:italic;
-  margin-top:6px;
-  font-size:24px;      /* bigger tagline */
-  font-weight:600;
+  margin-top:4px;
+  font-size:18px;
+  font-weight:500;
 }
 nav{
-  margin-top:20px;
+  margin-top:12px;
 }
 nav a{
   text-decoration:none;
   color:var(--dark);
-  margin-right:25px;
-  font-weight:700;       /* bold */
-  font-size:20px;        /* bigger */
+  margin-right:22px;
+  font-weight:700;
+  font-size:17px;
   transition:0.3s, transform 0.2s;
-  display:inline-block;  /* needed for transform on hover */
+  display:inline-block;
 }
 nav a:hover{
   color:var(--primary);
-  transform:translateY(-4px);  /* shifts upward */
+  transform:translateY(-3px);
+}
+
+/* NEW SERVICES STRIP */
+.new-services{
+  margin:30px 8% 0;
+  padding:18px 30px;
+  background:linear-gradient(90deg, #c06c84, #f3a6b6);
+  color:white;
+  border-radius:14px;
+  font-size:16px;
+  font-weight:500;
+  box-shadow:var(--shadow);
 }
 
 /* HERO */
@@ -108,14 +119,8 @@ nav a:hover{
 /* HERO IMAGE */
 .hero-image img{
   width:100%;
-  height:auto;
   border-radius:20px;
-  object-fit:cover;
   box-shadow:var(--shadow);
-  transition:0.4s;
-}
-.hero-image img:hover{
-  transform:scale(1.02);
 }
 
 /* SECTIONS */
@@ -129,7 +134,7 @@ section h2{
   color:var(--primary);
 }
 
-/* SERVICES GRID */
+/* SERVICES */
 .services-list{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -142,15 +147,6 @@ section h2{
   border-radius:18px;
   box-shadow:var(--shadow);
   font-size:18px;
-  font-weight:500;
-  color:var(--dark);
-  transition:0.3s;
-  cursor:default;
-}
-.services-list li:hover{
-  background:var(--primary);
-  color:white;
-  transform:translateY(-3px);
 }
 
 /* CLINIC IMAGES */
@@ -162,22 +158,8 @@ section h2{
 }
 .clinic-images img{
   width:100%;
-  height:auto;
   border-radius:20px;
-  object-fit:cover;
   box-shadow:var(--shadow);
-  transition:0.4s;
-}
-.clinic-images img:hover{
-  transform:scale(1.03);
-}
-
-/* WHY CHOOSE US */
-section p{
-  font-size:18px;
-  max-width:800px;
-  color:var(--muted);
-  line-height:1.8;
 }
 
 /* FOOTER */
@@ -190,42 +172,6 @@ footer{
 footer a{
   color:var(--primary);
   text-decoration:none;
-  transition:0.3s;
-}
-footer a:hover{
-  color:white;
-}
-
-/* RESPONSIVE */
-@media(max-width:1024px){
-  .hero{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-  .hero-image{
-    margin-top:40px;
-  }
-}
-@media(max-width:768px){
-  header h1{
-    font-size:34px;
-  }
-  .tagline{
-    font-size:20px;
-  }
-  .hero h2{
-    font-size:32px;
-  }
-  section{
-    padding:60px 6%;
-  }
-  .services-list{
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-  .clinic-images{
-    grid-template-columns:1fr;
-  }
 }
 </style>
 </head>
@@ -243,9 +189,14 @@ footer a:hover{
   </nav>
 </header>
 
-<!-- HERO -->
+<div class="new-services">
+  ✨ <strong>NEW SERVICES:</strong>
+  Q-Switch Laser • Tattoo Removal • Laser for Freckles • Laser for Uneven Skin Tone • Carbon Laser • Laser for Open Pores  
+  <em>— our latest advancements, come and try!</em>
+</div>
+
 <section class="hero">
-  <div class="hero-text">
+  <div>
     <h2>Advanced Skin, Laser & Aesthetic Treatments in Sirsa</h2>
     <p>Personalised, ethical and result-driven aesthetic care designed to enhance your natural beauty and confidence.</p>
     <a class="btn" href="contact.html">Book Appointment</a>
@@ -255,7 +206,6 @@ footer a:hover{
   </div>
 </section>
 
-<!-- POPULAR TREATMENTS -->
 <section>
   <h2>Our Popular Treatments</h2>
   <ul class="services-list">
@@ -268,31 +218,22 @@ footer a:hover{
   </ul>
 </section>
 
-<!-- CLINIC IMAGES -->
 <section>
   <h2>Inside Our Clinic</h2>
   <div class="clinic-images">
-    <img src="https://raw.githubusercontent.com/Aesthetics-SimranMalra/images/main/office.jpeg" alt="Clinic Office">
-    <img src="https://raw.githubusercontent.com/Aesthetics-SimranMalra/images/main/main_table.jpeg" alt="Treatment Area">
+    <img src="https://raw.githubusercontent.com/Aesthetics-SimranMalra/images/main/office.jpeg">
+    <img src="https://raw.githubusercontent.com/Aesthetics-SimranMalra/images/main/main_table.jpeg">
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
 <section>
   <h2>Why Choose Us</h2>
-<p style="font-size:20px; line-height:1.8; color:var(--dark); font-weight:500;">
-<span style="color:var(--primary); font-weight:600;">Every face is unique.</span> At <strong>Aesthetics By Simran Malra</strong>, treatments are never generic. We blend <span style="color:var(--primary);">medical expertise</span> with <span style="color:var(--primary);">aesthetic precision</span> to deliver <em>safe, subtle, and confidence-boosting results</em> tailored to you.
-</p>
+  <p><strong style="color:var(--primary);">Every face is unique.</strong> We deliver safe, subtle, confidence-boosting results tailored to you.</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>📍 Near Bhuman Shah Chowk, Barnala Road, Sirsa, Haryana</p>
-  <p>📞 Call / WhatsApp: 
-    <a href="https://wa.me/918108108042?text=Hello,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">
-      +91 81081 08042
-    </a>
-  </p>
+  <p>📞 <a href="https://wa.me/918108108042">+91 81081 08042</a></p>
 </footer>
 
 </body>
