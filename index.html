@@ -286,21 +286,20 @@ footer a{color:var(--primary);}
 
 .new-badge {
   display: inline-block;
-  background: #ff4757;       /* bright red for attention */
+  background: #e17055;       /* softer red/pink */
   color: white;
   font-size: 12px;
   font-weight: 700;
   padding: 3px 8px;
   border-radius: 12px;
   margin-right: 8px;
-  animation: blink 1s infinite; /* blinking animation */
+  animation: blink 1.2s infinite; /* slower, gentler blinking */
 }
 
 @keyframes blink {
   0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+  25%, 75% { opacity: 0.4; }  /* subtle fade instead of full disappear */
 }
-
 </style>
 
 
