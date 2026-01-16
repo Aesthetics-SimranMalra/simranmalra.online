@@ -205,20 +205,23 @@ footer a{color:var(--primary);}
 
     <a class="btn" href="contact.html">Book Appointment</a>
 
-    <!-- NEW SERVICES -->
-    <div class="new-services-area">
-      <div class="new-services-title">✨ New Services</div>
+.new-services-cloud .service-chip {
+  display: inline-block;
+  margin: 8px;
+  transition: transform 0.3s ease;
+}
 
-      <div class="new-services-cloud">
-        <span class="service-chip">Q-Switch Laser</span>
-        <span class="service-chip">Tattoo Removal</span>
-        <span class="service-chip">Freckles</span>
-        <span class="service-chip">Uneven Tone</span>
-        <span class="service-chip">Carbon Laser</span>
-        <span class="service-chip">Open Pores</span>
-      </div>
-    </div>
-  </div>
+/* Slight, varied rotations */
+.new-services-cloud .service-chip:nth-child(1) { transform: rotate(-2deg); }
+.new-services-cloud .service-chip:nth-child(2) { transform: rotate(1.5deg); }
+.new-services-cloud .service-chip:nth-child(3) { transform: rotate(-1deg); }
+.new-services-cloud .service-chip:nth-child(4) { transform: rotate(2deg); }
+.new-services-cloud .service-chip:nth-child(5) { transform: rotate(-1.5deg); }
+.new-services-cloud .service-chip:nth-child(6) { transform: rotate(1deg); }
+
+.new-services-cloud .service-chip:hover {
+  transform: rotate(0deg) scale(1.05);
+}
 
   <div class="hero-image">
     <img src="https://raw.githubusercontent.com/Aesthetics-SimranMalra/images/main/simran_main.jpeg" alt="Simran Malra">
@@ -237,13 +240,14 @@ footer a{color:var(--primary);}
   </ul>
 </section>
 
-<!-- DISCLAIMER -->
 <section class="disclaimer">
   <p>
-    <strong>Each face is unique.</strong> Skin type, concerns, lifestyle, and response to treatment vary from person to person.
-    All procedures are performed only after a detailed professional consultation and assessment.
-    Results, recovery time, and outcomes may differ, and no treatment guarantees identical results for every individual.
-    Our focus is always on safety, suitability, and natural-looking enhancement.
+    <strong>Because your face deserves a truly personalized approach.</strong><br><br>
+    No two individuals are alike—your skin, facial structure, concerns, lifestyle, and aesthetic goals are uniquely yours. 
+    That’s why every treatment we offer begins with a detailed, one-on-one professional consultation and expert assessment, ensuring each recommendation is tailored specifically to you.
+    <br><br>
+    Results and recovery timelines may naturally vary from person to person, but our commitment never changes. 
+    We prioritize safety, suitability, and precision at every step, delivering refined, natural-looking enhancements that respect your individuality and elevate your confidence.
   </p>
 </section>
 
