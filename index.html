@@ -5,7 +5,6 @@
 <title>Aesthetics By Simran Malra | Skin & Aesthetic Clinic</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -27,7 +26,7 @@ body{
   line-height:1.7;
 }
 
-/* HEADER (compact, non-sticky) */
+/* HEADER */
 header{
   background:white;
   padding:18px 8%;
@@ -76,33 +75,45 @@ nav a:hover{color:var(--primary);}
   font-size:18px;
 }
 
-/* NEW SERVICES — SMART PLACEMENT */
-.new-services-inline{
-  display:inline-block;
-  margin-top:18px;
-  padding:10px 18px;
-  border-radius:30px;
-  background:rgba(192,108,132,0.12);
-  color:var(--primary);
-  font-weight:600;
-  font-size:15px;
-  animation:pulse 1.8s infinite;
-}
-
-@keyframes pulse{
-  0%{opacity:1;}
-  50%{opacity:0.4;}
-  100%{opacity:1;}
-}
-
+/* CTA */
 .btn{
   display:inline-block;
-  margin-top:30px;
+  margin-top:20px;
   padding:16px 36px;
   background:var(--primary);
   color:white;
   text-decoration:none;
   border-radius:40px;
+  font-weight:600;
+}
+
+/* NEW SERVICES BLOCK */
+.new-services-wrapper{
+  margin-top:45px;              /* GAP from button */
+  text-align:center;
+}
+
+.new-services-title{
+  display:inline-block;
+  padding:8px 22px;
+  background:var(--secondary);
+  border-radius:30px;
+  font-weight:600;
+  color:var(--primary);
+  margin-bottom:14px;
+}
+
+.new-services-blink{
+  font-size:15px;
+  font-weight:600;
+  color:var(--dark);
+  animation:blink 1.8s infinite;
+}
+
+@keyframes blink{
+  0%{opacity:1;}
+  50%{opacity:0.4;}
+  100%{opacity:1;}
 }
 
 /* IMAGE */
@@ -167,16 +178,17 @@ footer a{color:var(--primary);}
 <section class="hero">
   <div>
     <h2>Advanced Skin, Laser & Aesthetic Treatments in Sirsa</h2>
-
-    <span class="new-services-inline">
-      ✨ NEW: Q-Switch Laser • Tattoo Removal • Freckles • Uneven Tone • Carbon Laser • Open Pores
-    </span>
-
-    <p>
-      Personalised, ethical and result-driven aesthetic care designed to enhance your natural beauty and confidence.
-    </p>
+    <p>Personalised, ethical and result-driven aesthetic care designed to enhance your natural beauty and confidence.</p>
 
     <a class="btn" href="contact.html">Book Appointment</a>
+
+    <!-- NEW SERVICES BELOW BUTTON -->
+    <div class="new-services-wrapper">
+      <div class="new-services-title">✨ New Services</div>
+      <div class="new-services-blink">
+        Q-Switch Laser • Tattoo Removal • Freckles • Uneven Tone • Carbon Laser • Open Pores
+      </div>
+    </div>
   </div>
 
   <div class="hero-image">
